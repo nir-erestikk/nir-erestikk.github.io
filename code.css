@@ -1,0 +1,186 @@
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0914; /* Чернильно-черный с фиолетовым отливом */
+    color: #f5f2eb; /* Мягкий белый (цвет пергамента) */
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ШАПКА И МЕНЮ */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: linear-gradient(to bottom, rgba(13, 9, 20, 0.95), rgba(13, 9, 20, 0));
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #d4af37; /* Золотой цвет */
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.main-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu-link {
+    color: #b5b0a3;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.menu-link:hover, .menu-link.active {
+    color: #d4af37;
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+}
+
+/* Элемент подчеркивания у меню */
+.menu-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #d4af37;
+    transition: width 0.3s ease;
+}
+
+.menu-link:hover::after, .menu-link.active::after {
+    width: 100%;
+}
+
+/* ГЛАВНЫЙ ЭКРАН (HERO) */
+.hero-section {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 80px 20px;
+    text-align: center;
+    /* Можно добавить фоновую картинку (например, размытый замок NRC или красивую текстуру) */
+    background: radial-gradient(circle, rgba(30,20,45,0.8) 0%, rgba(13,9,20,1) 70%);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    color: #f5f2eb;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: #b5b0a3;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* КНОПКИ */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 40px;
+    text-decoration: none;
+    color: #f5f2eb;
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: rgba(13, 9, 20, 0.6);
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* Золотая рамка для кнопок */
+.btn-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    transition: all 0.4s ease;
+}
+
+.btn:hover .btn-border {
+    border-color: #d4af37;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+}
+
+.btn:hover {
+    background: rgba(212, 175, 55, 0.1);
+    transform: translateY(-3px);
+    text-shadow: 0 0 5px #fff;
+}
+
+/* ФУТЕР */
+.main-footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #55515c;
+    border-top: 1px solid rgba(85, 81, 92, 0.2);
+}
+
+/* АНИМАЦИЯ ПЕРЕХОДА (Черная шторка) */
+.transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    z-index: 9999;
+    pointer-events: none;
+    transform: translateY(100%); /* По умолчанию спрятана внизу */
+    transition: transform 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* Класс "active" поднимает шторку вверх, освобождая экран */
+.transition-overlay.active {
+    transform: translateY(0);
+}
