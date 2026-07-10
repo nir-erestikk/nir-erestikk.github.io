@@ -190,3 +190,10 @@ body {
 .transition-overlay.active {
     transform: translateY(0);
 }
+
+.logo-image{
+    max-width: 100%; /* Картинка не будет выходить за пределы блока */
+    height: auto; /* Сохраняем пропорции */
+    display: block; /* Чтобы можно было задать margin для центрирования */
+    margin: 20px auto; /* Отступ сверху/снизу и центрирование */
+}
