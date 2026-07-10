@@ -6,7 +6,6 @@
 }
 
 body {
-    body {
     background-color: #0d0914; 
     background-image: url('assets/mainbackground.png'); 
     background-size: cover; 
@@ -21,8 +20,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
 }
 
 /* ШАПКА И МЕНЮ */
