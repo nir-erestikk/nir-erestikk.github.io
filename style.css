@@ -8,7 +8,7 @@
 body {
     background-color: #0d0914; /* Чернильно-черный с фиолетовым отливом */
     color: #f5f2eb; /* Мягкий белый (цвет пергамента) */
-    font-family: 'Cormorant Unicase', sans-serif;
+    font-family: 'Cormorant Unicase', serif;
     overflow-x: hidden;
     min-height: 100vh;
     display: flex;
