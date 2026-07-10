@@ -7,12 +7,12 @@
 
 body {
     body {
-    background-color: #0d0914; /* Запасной цвет, если картинка не загрузится */
-    background-image: url(''); /* Путь к твоей картинке */
-    background-size: cover; /* Растягивает картинку, чтобы она покрывала всю область */
-    background-position: center center; /* Центрирует картинку */
-    background-repeat: no-repeat; /* Запрещает повторение картинки */
-    background-attachment: fixed; /* Фиксирует фон при прокрутке */
+    background-color: #0d0914; 
+    background-image: url('assets/mainbackground.png'); 
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
 
     color: #f5f2eb;
     font-family: 'Montserrat', sans-serif;
