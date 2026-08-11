@@ -197,3 +197,211 @@ body {
     display: block; /* Чтобы можно было задать margin для центрирования */
     margin: 20px auto; /* Отступ сверху/снизу и центрирование */
 }
+
+/* ===================================================
+   АЛЬБОМЫ И АККОРДЕОН ПЕРСОНАЖЕЙ (ОФИЦИАЛЬНЫЙ СТИЛЬ TWST)
+   =================================================== */
+
+.albums-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Переключатель общежитий */
+.dorm-selector {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.dorm-btn {
+    background: rgba(20, 15, 30, 0.7);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #b5b0a3;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.dorm-crest {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: grayscale(80%);
+    transition: filter 0.3s ease;
+}
+
+.dorm-btn:hover, .dorm-btn.active {
+    border-color: #d4af37;
+    color: #f5f2eb;
+    background: rgba(212, 175, 55, 0.15);
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+}
+
+.dorm-btn:hover .dorm-crest, .dorm-btn.active .dorm-crest {
+    filter: grayscale(0%);
+}
+
+/* Заголовок общежития */
+.dorm-header-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dorm-header-title h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: #f5f2eb;
+    letter-spacing: 2px;
+}
+
+.dorm-sub {
+    font-size: 0.85rem;
+    color: #8c867a;
+    font-style: italic;
+}
+
+/* КОНТЕЙНЕР АККОРДЕОНА */
+.character-accordion {
+    display: flex;
+    width: 100%;
+    height: 520px; /* Высота карточек */
+    background: #000;
+    border: 2px solid #2a2433;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* Карточка отдельного персонажа */
+.char-card {
+    position: relative;
+    flex: 1; /* Все карточки изначально одинаковой ширины */
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.char-card:last-child {
+    border-right: none;
+}
+
+/* Изображение персонажа */
+.char-img-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.char-sprite {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    /* Чёрно-белый фильтр по умолчанию */
+    filter: grayscale(100%) brightness(0.7);
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+/* Текстовая плашка с именем */
+.char-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px 15px 10px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0));
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.char-name-en {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #b5b0a3;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.char-name-jp {
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 4px;
+}
+
+/* Красная акцентная рамка как в игре */
+.char-active-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #ba1c1c; /* Красный цвет Хартслабьюла (можно менять под общежитие) */
+    box-sizing: border-border;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 3;
+    transition: opacity 0.3s ease;
+}
+
+/* ===================================================
+   СОСТОЯНИЕ ПРИ НАВЕДЕНИИ (HOVER EFFECTS)
+   =================================================== */
+
+/* При наведении карточка расширяется */
+.char-card:hover {
+    flex: 2.2; /* Увеличиваем ширину в 2.2 раза */
+}
+
+/* Спрайт становится цветным и немного приближается */
+.char-card:hover .char-sprite {
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1.03);
+}
+
+/* Появляется красная рамка */
+.char-card:hover .char-active-border {
+    opacity: 1;
+}
+
+/* Имя подсвечивается золотым/белым */
+.char-card:hover .char-name-en {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.char-card:hover .char-name-jp {
+    color: #b5b0a3;
+}
+
+/* Адаптируем под мобильные экраны (вертикальный список вместо аккордеона) */
+@media (max-width: 768px) {
+    .character-accordion {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .char-card {
+        height: 180px;
+    }
+
+    .char-card:hover {
+        flex: none;
+        height: 280px;
+    }
+}
