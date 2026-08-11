@@ -2,51 +2,32 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NRC OC ASK | Главная</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Twisted Wonderland Ask</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Черная шторка для анимации перехода (по умолчанию закрывает экран при загрузке и улетает вверх) -->
-    <div class="transition-overlay active"></div>
+    <!-- Меню, которое будет на всех страницах -->
+    <nav class="main-menu">
+        <a href="index.html">Главная</a>
+        <a href="lore.html">Лор</a>
+        <a href="albums.html">Альбомы</a>
+    </nav>
 
-    <!-- Общая шапка с меню -->
-    <header class="main-header">
-        <div class="logo">Twisted Wonderland OC ASK | New Generation</div>
-        <nav class="main-menu">
-            <a href="index.html" class="menu-link active">Главная</a>
-            <a href="lore.html" class="menu-link">Лор</a>
-            <a href="albums.html" class="menu-link">Альбомы</a>
-        </nav>
-    </header>
-
-    <!-- Главный экран -->
-    <main class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">Welcome to <br>
-            <img src="assets/logo_main.png" class="logo-image">
-            let us show you the real happily-ever-after </h1>
-            <p class="hero-subtitle">Неофициальный художенственный аск, посвященный оригинальным персонажам во вселенной Twisted Wonderland.</p>
+    <main class="content">
+        <section class="hero">
+            <h1>Добро пожаловать в Night Raven College</h1>
+            <p>Краткое описание вашего аска и его особенностей.</p>
             
-            <!-- Кнопки разделов -->
-            <div class="hero-buttons">
-                <a href="lore.html" class="btn btn-primary transition-trigger">
-                    <span class="btn-text">Изучить Лор</span>
-                    <span class="btn-border"></span>
-                </a>
-                <a href="albums.html" class="btn btn-secondary transition-trigger">
-                    <span class="btn-text">Галерея Работ</span>
-                    <span class="btn-border"></span>
-                </a>
+            <div class="nav-buttons">
+                <a href="lore.html" class="btn">Изучить мир</a>
+                <a href="albums.html" class="btn">Галерея работ</a>
             </div>
-        </div>
+        </section>
     </main>
 
-    <footer class="main-footer">
-        <p>© Twisted Wonderland OC Ask. Все права на оригинальную игру принадлежат Disney & Aniplex.</p>
-    </footer>
+    <!-- Слой для анимации перехода -->
+    <div class="transition-overlay"></div>
 
     <script src="script.js"></script>
 </body>
