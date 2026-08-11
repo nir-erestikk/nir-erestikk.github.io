@@ -72,7 +72,7 @@
                 </div>
 
                 <div class="character-accordion">
-                    <div class="char-card">
+                    <div class="char-card" data-card="assets/cards/kartochka_Pongo.png">
                         <div class="char-img-wrapper">
                             <img src="assets/chars/ПонгоОбрез.png" alt="Понго Стрипл" class="char-sprite">
                         </div>
@@ -328,5 +328,12 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <div class="modal-overlay" id="char-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <img src="" alt="Карточка персонажа" class="modal-card-img" id="modal-img">
+        </div>
+    </div>
 </body>
 </html>
