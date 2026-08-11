@@ -37,7 +37,7 @@ body {
 }
 
 .logo {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Unicase', serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: #d4af37; /* Золотой цвет */
@@ -100,7 +100,7 @@ body {
 }
 
 .hero-title {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Unicase', serif;
     font-size: 3rem;
     color: #f5f2eb;
     margin-bottom: 20px;
