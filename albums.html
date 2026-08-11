@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NRC OC ASK | Альбомы Персонажей</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div class="transition-overlay active"></div>
+
+    <!-- Шапка -->
+    <header class="main-header">
+        <div class="logo">NRC OC ASK</div>
+        <nav class="main-menu">
+            <a href="index.html" class="menu-link">Главная</a>
+            <a href="lore.html" class="menu-link">Лор</a>
+            <a href="albums.html" class="menu-link active">Альбомы</a>
+        </nav>
+    </header>
+
+    <main class="content-section albums-page">
+        <div class="albums-container">
+            
+            <h1 class="page-title">Студенты и Отвечающие</h1>
+            <p class="intro-text">Выберите общежитие, чтобы посмотреть оригинальных персонажей нашего аска</p>
+
+            <!-- 1. Навигация по общежитиям (иконки снизу или сверху) -->
+            <div class="dorm-selector">
+                <button class="dorm-btn active" data-dorm="heartslabyul">
+                    <img src="assets/dorms/heartslabyul-crest.png" alt="Heartslabyul" class="dorm-crest">
+                    <span>Heartslabyul</span>
+                </button>
+                <button class="dorm-btn" data-dorm="savanaclaw">
+                    <img src="assets/dorms/savanaclaw-crest.png" alt="Savanaclaw" class="dorm-crest">
+                    <span>Savanaclaw</span>
+                </button>
+                <button class="dorm-btn" data-dorm="octavinelle">
+                    <img src="assets/dorms/octavinelle-crest.png" alt="Octavinelle" class="dorm-crest">
+                    <span>Octavinelle</span>
+                </button>
+                <button class="dorm-btn" data-dorm="scarabia">
+                    <img src="assets/dorms/scarabia-crest.png" alt="Scarabia" class="dorm-crest">
+                    <span>Scarabia</span>
+                </button>
+                <!-- Добавь остальные общежития по аналогии -->
+            </div>
+
+            <!-- 2. Галерея персонажей (Интерактивный аккордеон) -->
+            <div class="dorm-view active" id="dorm-heartslabyul">
+                <div class="dorm-header-title">
+                    <h2>Heartslabyul Dorm</h2>
+                    <span class="dorm-sub">Twisted from Alice in Wonderland</span>
+                </div>
+
+                <div class="character-accordion">
+                    
+                    <!-- Персонаж 1 -->
+                    <div class="char-card">
+                        <div class="char-img-wrapper">
+                            <!-- Спрайт персонажа -->
+                            <img src="assets/chars/oc_1.png" alt="Имя Персонажа 1" class="char-sprite">
+                        </div>
+                        <div class="char-info">
+                            <span class="char-name-en">Riddle Rosehearts</span>
+                            <span class="char-name-jp">リドル・ローズハート</span>
+                        </div>
+                        <div class="char-active-border"></div>
+                    </div>
+
+                    <!-- Персонаж 2 -->
+                    <div class="char-card">
+                        <div class="char-img-wrapper">
+                            <img src="assets/chars/oc_2.png" alt="Имя Персонажа 2" class="char-sprite">
+                        </div>
+                        <div class="char-info">
+                            <span class="char-name-en">Ace Trappola</span>
+                            <span class="char-name-jp">エース・トラッポラ</span>
+                        </div>
+                        <div class="char-active-border"></div>
+                    </div>
+
+                    <!-- Персонаж 3 -->
+                    <div class="char-card">
+                        <div class="char-img-wrapper">
+                            <img src="assets/chars/oc_3.png" alt="Имя Персонажа 3" class="char-sprite">
+                        </div>
+                        <div class="char-info">
+                            <span class="char-name-en">Deuce Spade</span>
+                            <span class="char-name-jp">デュース・スペード</span>
+                        </div>
+                        <div class="char-active-border"></div>
+                    </div>
+
+                    <!-- Персонаж 4 -->
+                    <div class="char-card">
+                        <div class="char-img-wrapper">
+                            <img src="assets/chars/oc_4.png" alt="Имя Персонажа 4" class="char-sprite">
+                        </div>
+                        <div class="char-info">
+                            <span class="char-name-en">Trey Clover</span>
+                            <span class="char-name-jp">トレイ・クローバー</span>
+                        </div>
+                        <div class="char-active-border"></div>
+                    </div>
+
+                    <!-- Персонаж 5 -->
+                    <div class="char-card">
+                        <div class="char-img-wrapper">
+                            <img src="assets/chars/oc_5.png" alt="Имя Персонажа 5" class="char-sprite">
+                        </div>
+                        <div class="char-info">
+                            <span class="char-name-en">Cater Diamond</span>
+                            <span class="char-name-jp">ケイト・ダイヤモンド</span>
+                        </div>
+                        <div class="char-active-border"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>© Twisted Wonderland OC Ask. Все права на оригинальную игру принадлежат Disney & Aniplex.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
