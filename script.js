@@ -37,18 +37,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // Переключение общежитий в альбомах
 const dormButtons = document.querySelectorAll('.dorm-btn');
+const dormViews = document.querySelectorAll('.dorm-view');
 
 dormButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Убираем активный класс у всех кнопок
+        const dormName = button.getAttribute('data-dorm');
+
+        // 1. Меняем активную кнопку
         dormButtons.forEach(btn => btn.classList.remove('active'));
-        
-        // Добавляем кликнутой кнопке
         button.classList.add('active');
 
-        const selectedDorm = button.getAttribute('data-dorm');
-        console.log("Выбранное общежитие:", selectedDorm);
-        
-        // В будущем здесь будет переключение видимости блоков `dorm-view`
+        // 2. Показываем нужное общежитие и скрываем остальные
+        dormViews.forEach(view => {
+            view.classList.remove('active');
+            if (view.id === `dorm-${dormName}`) {
+                view.classList.add('active');
+            }
+        });
     });
 });
