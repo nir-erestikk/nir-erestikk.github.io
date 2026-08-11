@@ -13,7 +13,7 @@ body {
     background-attachment: fixed; /* Фиксирует фон при прокрутке */
 
     color: #f5f2eb;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Cormorant Unicase', sans-serif;
     overflow-x: hidden;
     min-height: 100vh;
     display: flex;
@@ -258,7 +258,7 @@ body {
 }
 
 .dorm-header-title h2 {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Unicase', serif;
     font-size: 2rem;
     color: #f5f2eb;
     letter-spacing: 2px;
@@ -330,7 +330,7 @@ body {
 }
 
 .char-name-en {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Unicase', serif;
     font-size: 1rem;
     font-weight: 700;
     color: #b5b0a3;
@@ -339,6 +339,7 @@ body {
 }
 
 .char-name-jp {
+    font-family: 'Cormorant Unicase', serif;
     font-size: 0.75rem;
     color: #666;
     margin-top: 4px;
