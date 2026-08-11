@@ -208,6 +208,23 @@ body {
     margin: 0 auto;
 }
 
+.page-title {
+    font-family: 'Cormorant Unicase', serif;
+    font-size: 3.5rem; /* Сделали крупнее */
+    font-weight: 700;
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.albums-header {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
 /* Переключатель общежитий */
 .dorm-selector {
     display: flex;
@@ -254,14 +271,15 @@ body {
 /* Заголовок общежития */
 .dorm-header-title {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .dorm-header-title h2 {
     font-family: 'Cormorant Unicase', serif;
-    font-size: 2rem;
+    font-size: 2.5rem; /* Крупный заголовок общежития */
     color: #f5f2eb;
     letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .dorm-sub {
@@ -270,6 +288,18 @@ body {
     font-style: italic;
 }
 
+.dorm-view {
+    display: none; /* По умолчанию скрываем все */
+    animation: fadeIn 0.4s ease-in-out;
+}
+.dorm-view.active {
+    display: block; /* Показываем только активное */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 /* КОНТЕЙНЕР АККОРДЕОНА */
 .character-accordion {
     display: flex;
@@ -403,6 +433,52 @@ body {
 
     .char-card:hover {
         flex: none;
-        height: 280px;
+        height: 180px;
     }
+}
+
+.empty-dorm-box {
+    width: 100%;
+    min-height: 400px;
+    background: rgba(20, 15, 30, 0.6);
+    border: 1px dashed rgba(212, 175, 55, 0.4);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.5);
+}
+
+.empty-icon {
+    font-size: 2.5rem;
+    color: #d4af37;
+    margin-bottom: 15px;
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.9); opacity: 0.6; }
+    100% { transform: scale(1.1); opacity: 1; text-shadow: 0 0 15px #d4af37; }
+}
+
+.empty-title {
+    font-family: 'Cormorant Unicase', serif;
+    font-size: 1.8rem;
+    color: #f5f2eb;
+    margin-bottom: 10px;
+}
+
+.empty-text {
+    font-size: 1.05rem;
+    color: #b5b0a3;
+    max-width: 500px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.btn-empty {
+    margin-top: 10px;
 }
