@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 100);
 
     // 2. Эффект при клике на ссылки 
-    // Находим все ссылки перехода (кнопки и меню)
     const links = document.querySelectorAll(".transition-trigger, .menu-link");
 
     links.forEach(link => {
