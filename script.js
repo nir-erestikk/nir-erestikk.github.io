@@ -55,3 +55,48 @@ dormButtons.forEach(button => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const charCards = document.querySelectorAll('.char-card');
+    const modal = document.getElementById('char-modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalClose = document.getElementById('modal-close');
+
+    if (modal && modalImg) {
+        // При клике на карточку персонажа
+        charCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const cardImgSrc = card.getAttribute('data-card');
+                
+                if (cardImgSrc) {
+                    modalImg.src = cardImgSrc; // Устанавливаем ссылку на готовую картинку
+                    modal.classList.add('active'); // Показываем окно
+                }
+            });
+        });
+
+        // Функция закрытия окна
+        const closeModal = () => {
+            modal.classList.remove('active');
+        };
+
+        // Закрытие по нажатию на крестик
+        if (modalClose) {
+            modalClose.addEventListener('click', closeModal);
+        }
+
+        // Закрытие по клику на темный фон вокруг карточки
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Закрытие по клавише ESC на клавиатуре
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
+});
