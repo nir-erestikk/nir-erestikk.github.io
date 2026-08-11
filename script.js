@@ -35,3 +35,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+// Переключение общежитий в альбомах
+const dormButtons = document.querySelectorAll('.dorm-btn');
+
+dormButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Убираем активный класс у всех кнопок
+        dormButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Добавляем кликнутой кнопке
+        button.classList.add('active');
+
+        const selectedDorm = button.getAttribute('data-dorm');
+        console.log("Выбранное общежитие:", selectedDorm);
+        
+        // В будущем здесь будет переключение видимости блоков `dorm-view`
+    });
+});
