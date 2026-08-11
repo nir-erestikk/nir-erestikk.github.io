@@ -222,7 +222,7 @@ body {
 
 .albums-header {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 70px; /* Опускает заголовок ниже шапки меню */
     margin-bottom: 35px;
 }
 /* Переключатель общежитий */
