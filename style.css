@@ -303,8 +303,11 @@ body {
 /* КОНТЕЙНЕР АККОРДЕОНА */
 .character-accordion {
     display: flex;
-    width: 100%;
-    height: 520px; /* Высота карточек */
+    justify-content: center; /* Центрируем карточки, если их мало */
+    width: fit-content; /* Ширина подстраивается под количество карточек */
+    max-width: 100%;
+    margin: 0 auto; /* Помещаем всю рамку по центру */
+    height: 520px;
     background: #000;
     border: 2px solid #2a2433;
     border-radius: 8px;
@@ -315,12 +318,14 @@ body {
 /* Карточка отдельного персонажа */
 .char-card {
     position: relative;
-    flex: 1; /* Все карточки изначально одинаковой ширины */
+    flex: 1;
+    width: 220px; /* Оптимальная базовая ширина карточки */
+    max-width: 240px; /* Не даем ей раздуваться, если персонажей мало */
     height: 100%;
     cursor: pointer;
     overflow: hidden;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
-    transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .char-card:last-child {
@@ -397,6 +402,7 @@ body {
 /* При наведении карточка расширяется */
 .char-card:hover {
     flex: 1.5; /* Увеличиваем ширину в 2.2 раза */
+    max-width: 380px;
 }
 
 /* Спрайт становится цветным и немного приближается */
