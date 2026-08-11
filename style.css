@@ -387,7 +387,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    border: 3px solid #ba1c1c; /* Красный цвет Хартслабьюла (можно менять под общежитие) */
+    border: 3px solid #c59f49; /* Красный цвет Хартслабьюла (можно менять под общежитие) */
     box-sizing: border-border;
     pointer-events: none;
     opacity: 0;
