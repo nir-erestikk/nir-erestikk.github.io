@@ -184,3 +184,12 @@ body {
 .transition-overlay.active {
     transform: translateY(0);
 }
+
+.lore-image {
+    max-width: 100%; /* Картинка не будет выходить за пределы блока */
+    height: auto; /* Сохраняем пропорции */
+    display: block; /* Чтобы можно было задать margin для центрирования */
+    margin: 20px auto; /* Отступ сверху/снизу и центрирование */
+    border: 1px solid #d4af37; /* Тонкая золотая рамка */
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3); /* Легкое свечение */
+}
