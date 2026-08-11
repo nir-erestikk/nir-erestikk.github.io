@@ -435,6 +435,32 @@ body {
         flex: none;
         height: 180px;
     }
+
+    .character-accordion {
+        flex-direction: column;
+        height: auto;
+        gap: 10px; /* Небольшой отступ между карточками */
+        background: transparent;
+        border: none;
+    }
+
+    .char-card {
+        height: 200px; /* Фиксированная комфортная высота для всех карточек */
+        border-radius: 6px;
+        border-right: none;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    /* ОТКЛЮЧАЕМ увеличение высоты и масштабирование картинки на мобильных */
+    .char-card:hover {
+        flex: none;
+        height: 200px; /* Высота НЕ увеличивается */
+    }
+
+    .char-card:hover .char-sprite {
+        transform: none; /* Отключаем приближение изображения */
+    }
+}
 }
 
 .empty-dorm-box {
