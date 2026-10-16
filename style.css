@@ -183,7 +183,7 @@ body {
     z-index: 9999;
     pointer-events: none;
     transform: translateY(100%); /* По умолчанию спрятана внизу */
-    transition: transform 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+    transition: transform 1.0s cubic-bezier(0.85, 0, 0.15, 1);
 }
 
 /* Класс "active" поднимает шторку вверх, освобождая экран */
