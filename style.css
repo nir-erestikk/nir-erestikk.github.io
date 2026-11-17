@@ -801,7 +801,7 @@ body {
 
 .lore-quote {
     background: rgba(0, 0, 0, 0.4);
-    border-left: 3px solid #ba1c1c; /* Красный акцент */
+    border-left: 3px solid #d4af37;
     padding: 15px 20px;
     margin-top: 20px;
     font-style: italic;
